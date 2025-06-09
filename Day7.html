@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Day7</title>
+<style>
+.a {
+border: 2px solid black ;
+text-align: center ;
+}
+.b {
+    border : 2px solid red;
+    padding:10px;
+    margin:10px;
+    text-align: center;
+    width: 100%;
+}
+.c {
+    border : 2px solid blue;
+    padding:10px;
+    margin: 10px ;
+    text-align:center;
+
+
+}
+
+</style>
+</head>
+<body>
+<div class= "a">
+<h1> this a heading</h1>
+<p>this a paragraph</p>
+<button onclick="changetext();">Click me</button>
+</div>
+
+<div class="b"> 
+    <form id="form">
+        <label>
+            Enter your name 
+            <input type="text" id="inputField">
+        </label>
+        <button type="button" class="button1">SUBMIT</button>
+    </form>
+</div>
+
+<div class="c">
+    <button class="button3">Change Background</button>
+    
+</div>
+</body>
+<script>
+let h1 = document.querySelector("h1");
+let p = document.querySelector("p");
+function changetext() {
+    h1.innerHTML = "change Text";
+    p.innerHTML = "Change Text";
+}
+
+let button = document.querySelector(".button1");
+let div = document.querySelector(".b");
+button.addEventListener("click", fun);
+
+function fun() {
+    let input = document.querySelector("#inputField").value;
+    let heading2 = document.createElement("h1");
+    heading2.innerHTML = " welcome"+input  ;
+    div.appendChild(heading2);
+}
+ let button3 = document.querySelector(".button3");
+button3.addEventListener("click" , fun1);
+function fun1() {
+    let page= document.querySelector("body");
+    document.body.style.backgroundColor = "rgb(29,39,23)";
+
+}
+
+
+
+
+</script>
+</html>
